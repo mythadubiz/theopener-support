@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Opener — Support</title>
+    <link rel="icon" type="image/png" href="appicon.png">
+    <link rel="apple-touch-icon" href="appicon.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(180deg, #3D0B1F 0%, #1F0510 100%);
+            color: #F5EDD9;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .icon {
+            width: 96px;
+            height: 96px;
+            border-radius: 22px;
+            margin-bottom: 20px;
+            box-shadow: 0 12px 40px rgba(212, 168, 90, 0.35);
+            display: inline-block;
+        }
+        h1 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: 4px;
+            background: linear-gradient(180deg, #F5D38C, #D4A85A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtitle {
+            color: rgba(245, 237, 217, 0.55);
+            font-size: 15px;
+            font-style: italic;
+            font-family: 'Georgia', serif;
+        }
+        .flourish {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 16px 0;
+        }
+        .flourish .line {
+            width: 50px;
+            height: 0.6px;
+            background: rgba(212, 168, 90, 0.5);
+        }
+        .flourish .diamond {
+            width: 5px;
+            height: 5px;
+            background: rgba(212, 168, 90, 0.7);
+            transform: rotate(45deg);
+        }
+        .card {
+            background: rgba(31, 5, 16, 0.5);
+            border: 0.6px solid rgba(212, 168, 90, 0.3);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 16px;
+        }
+        .card h2 {
+            font-family: 'Georgia', serif;
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #D4A85A;
+            letter-spacing: 1px;
+        }
+        .card p, .card li {
+            color: rgba(245, 237, 217, 0.85);
+            line-height: 1.7;
+            font-size: 15px;
+        }
+        .card p + p, .card p + ul {
+            margin-top: 12px;
+        }
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .card li {
+            padding-left: 18px;
+            position: relative;
+            margin-bottom: 8px;
+        }
+        .card li::before {
+            content: '◆';
+            position: absolute;
+            left: 0;
+            color: rgba(212, 168, 90, 0.55);
+            font-size: 8px;
+            top: 6px;
+        }
+        a {
+            color: #D4A85A;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #F5D38C;
+            text-decoration: underline;
+        }
+        .contact-link {
+            display: inline-block;
+            background: linear-gradient(180deg, #F5D38C, #D4A85A);
+            color: #1F0510;
+            padding: 14px 32px;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-top: 14px;
+            box-shadow: 0 8px 24px rgba(212, 168, 90, 0.35);
+        }
+        .contact-link:hover {
+            opacity: 0.95;
+            text-decoration: none;
+            color: #1F0510;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 10px;
+            margin-top: 8px;
+        }
+        .feature {
+            background: rgba(245, 237, 217, 0.04);
+            border: 0.6px solid rgba(212, 168, 90, 0.2);
+            border-radius: 12px;
+            padding: 14px 8px;
+            text-align: center;
+        }
+        .feature .number {
+            font-family: 'Georgia', serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: #D4A85A;
+        }
+        .feature .label {
+            font-size: 11px;
+            color: rgba(245, 237, 217, 0.55);
+            margin-top: 4px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: rgba(245, 237, 217, 0.4);
+            font-size: 12px;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+        }
+        .footer a {
+            color: rgba(212, 168, 90, 0.7);
+        }
+        @media (max-width: 480px) {
+            .features {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img class="icon" src="appicon.png" alt="The Opener">
+            <h1>THE OPENER</h1>
+            <div class="flourish">
+                <span class="line"></span>
+                <span class="diamond"></span>
+                <span class="line"></span>
+            </div>
+            <p class="subtitle">Open the conversation</p>
+        </div>
+
+        <div class="card">
+            <h2>Contact Support</h2>
+            <p>Need help, found a bug, or have feedback? We'd love to hear from you.</p>
+            <a href="mailto:mythadubiz@gmail.com" class="contact-link">Email Us</a>
+        </div>
+
+        <div class="card">
+            <h2>Frequently Asked Questions</h2>
+            <p><strong>How do I restore my purchase?</strong><br>
+            Open Settings (gear icon) → scroll to "Restore Purchases" and tap. Your premium access will be restored instantly.</p>
+            <p><strong>How do I change the language?</strong><br>
+            Open Settings → Language → pick from 17 languages. All 1440 questions are translated, no internet needed.</p>
+            <p><strong>How do I enable or disable categories?</strong><br>
+            Open Settings → scroll to Categories → toggle each of the 10 categories on or off.</p>
+            <p><strong>What is included in Premium?</strong><br>
+            All 10 categories (1440 questions total), all 17 languages, all 50 card designs. One-time purchase, yours forever.</p>
+            <p><strong>Is my data collected?</strong><br>
+            No. The Opener does not collect any personal data. Everything stays on your device.</p>
+        </div>
+
+        <div class="card">
+            <h2>What's Inside</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="number">1440</div>
+                    <div class="label">Questions</div>
+                </div>
+                <div class="feature">
+                    <div class="number">10</div>
+                    <div class="label">Categories</div>
+                </div>
+                <div class="feature">
+                    <div class="number">17</div>
+                    <div class="label">Languages</div>
+                </div>
+                <div class="feature">
+                    <div class="number">50</div>
+                    <div class="label">Card Styles</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>The Ten Categories</h2>
+            <ul>
+                <li>Icebreaker — warm openers to get the conversation going</li>
+                <li>Curiosity — genuine get-to-know-you questions</li>
+                <li>Story — invitations to share a memorable narrative</li>
+                <li>Playful — flirty, teasing, chemistry-building prompts</li>
+                <li>Vision — values, future, and deeper aspirations</li>
+                <li>Hypothetical — imagination and "what if" scenarios</li>
+                <li>This or That — rapid-fire real-world preferences</li>
+                <li>Travel — places, journeys, and horizons</li>
+                <li>Would You Rather — silly, absurd forced-choice games</li>
+                <li>Long Distance — daily rituals for couples apart</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Privacy</h2>
+            <p>The Opener collects no personal data. Read our full <a href="privacy.html">Privacy Policy</a>.</p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 The Opener &middot; <a href="privacy.html">Privacy Policy</a></p>
+        </div>
+    </div>
+</body>
+</html>
